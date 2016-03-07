@@ -12,7 +12,7 @@ var context = { module: {}, console: console };
 context.sT = setTimeout;
 context.sI = setInterval;
 context.global = context;
-context.ut = util;
+context.util = require('util');
 context.req = function(m) {
 	var date = new Date();
 	date.setTime(date.getTime() + 3 * 3600 * 1000);
