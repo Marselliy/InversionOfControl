@@ -5,6 +5,11 @@ console.log('From application global context');
 function timerEvent() {
   console.log('From application timer event');
 }
+fsWrapper.writeFile('helloworld.txt', 'Hello World!', function (err) {
+  if (err) return console.log(err);
+  console.log('Hello World > helloworld.txt');
+});
 
 // Устанавливаем функцию на таймер
-setTimeout(timerEvent, 1000);
+setTimeoutContext(timerEvent, 1000);
+displayStats();
